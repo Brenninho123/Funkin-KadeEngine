@@ -1,0 +1,19 @@
+{
+	"name": "philly",
+	"camZoom": 0.9,
+	"sounds": [
+		{ "name": "trainPass", "path": "train_passes", "library": "week3" }
+	],
+	"sprites": [
+		{ "name": "sky", "image": "philly/sky", "library": "week3", "x": -100, "y": 0, "scrollFactor": [0.1, 0.1] },
+		{ "name": "city", "image": "philly/city", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "scrollFactor": [0.3, 0.3] },
+		{ "name": "phillyLight0", "image": "philly/win0", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "antialiasing": true, "visible": false, "distraction": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "phillyLight1", "image": "philly/win1", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "antialiasing": true, "visible": false, "distraction": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "phillyLight2", "image": "philly/win2", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "antialiasing": true, "visible": false, "distraction": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "phillyLight3", "image": "philly/win3", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "antialiasing": true, "visible": false, "distraction": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "phillyLight4", "image": "philly/win4", "library": "week3", "x": -10, "y": 0, "scale": 0.85, "antialiasing": true, "visible": false, "distraction": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "streetBehind", "image": "philly/behindTrain", "library": "week3", "x": -40, "y": 50 },
+		{ "name": "phillyTrain", "image": "philly/train", "library": "week3", "x": 2000, "y": 360, "distraction": true },
+		{ "name": "street", "image": "philly/street", "library": "week3", "x": -40, "y": 50 }
+	]
+}
