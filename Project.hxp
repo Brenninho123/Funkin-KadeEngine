@@ -1,0 +1,188 @@
+import hxp.*;
+
+class Project extends HXProject
+{
+	public function new()
+	{
+		super();
+
+		if (!defines.exists("mobile"))
+		{
+			app.title = "Friday Night Funkin': Kade Engine";
+			app.file = "Kade Engine";
+		}
+		else
+		{
+			app.title = "FNF: Kade Engine";
+			app.file = "KadeEngine";
+		}
+
+		app.packageName = "me.funkin.kadecrew";
+		app.main = "Main";
+		app.version = "0.0.1";
+		app.company = "The Kade Crew";
+
+		meta.set("APP_ID", "0x0100f6c013bbc000");
+
+		app.preloader = "flixel.system.FlxPreloader";
+
+		window.width = 1280;
+		window.height = 720;
+		window.background = "#000000";
+		window.hardware = true;
+		window.vsync = false;
+		window.antialiasing = 0;
+
+		if (defines.exists("html5"))
+		{
+			window.resizable = true;
+			window.allowHighDPI = true;
+		}
+
+		if (defines.exists("desktop"))
+		{
+			window.orientation = LANDSCAPE;
+			window.fullscreen = false;
+			window.resizable = true;
+			window.vsync = false;
+			window.allowHighDPI = true;
+		}
+
+		if (defines.exists("windows"))
+			window.allowShaders = true;
+
+		if (defines.exists("mac"))
+			window.allowShaders = true;
+
+		if (defines.exists("linux"))
+			window.allowShaders = true;
+
+		if (defines.exists("mobile"))
+		{
+			window.orientation = LANDSCAPE;
+			window.fullscreen = true;
+			window.width = 1280;
+			window.height = 720;
+			window.resizable = false;
+			window.allowHighDPI = true;
+			defines.set("mobileC", "");
+			assets.push(new Asset("assets/shared/images/hitbox", "assets/shared/images/hitbox", null, null, null, false));
+		}
+
+		if (defines.exists("android"))
+		{
+			defines.set("ANDROID_TARGET_SDK_VERSION", "34");
+			defines.set("ANDROID_MIN_SDK_VERSION", "21");
+		}
+
+		if (defines.exists("ios"))
+		{
+			defines.set("IPHONE_VER", "12.0");
+			window.orientation = LANDSCAPE;
+		}
+
+		if (defines.exists("switch"))
+		{
+			window.orientation = LANDSCAPE;
+			window.fullscreen = true;
+			window.width = 0;
+			window.height = 0;
+			window.resizable = true;
+		}
+
+		if (defines.exists("debug"))
+			app.path = "export/debug";
+		else
+			app.path = "export/release";
+
+		if (defines.exists("32bit"))
+			app.path = "export/32bit";
+
+		sources.push("source");
+
+		var soundExclude = defines.exists("web") ? "*.ogg" : "*.mp3";
+
+		assets.push(new Asset("assets/preload", "assets", null, null, null, false, [soundExclude]));
+
+		var libraries = ["songs", "shared", "tutorial", "week1", "week2", "week3", "week4", "week5", "week6"];
+
+		for (library in libraries)
+		{
+			if (System.exists('assets/$library'))
+				assets.push(new Asset('assets/$library', 'assets/$library', null, null, library, false, [soundExclude]));
+			else
+				Log.warn('Missing asset folder: assets/$library');
+		}
+
+		if (!defines.exists("switch") && !defines.exists("html5"))
+		{
+			defines.set("MODS_ALLOWED", "");
+
+			if (!System.exists("mods"))
+				System.mkdir("mods");
+
+			if (System.exists("example_mods"))
+				assets.push(new Asset("example_mods", "mods", null, false));
+
+			assets.push(new Asset("mods", "mods", null, false, null, false, ["*.ogg", "*.mp3"]));
+		}
+
+		if (System.exists("art/readme.txt"))
+			assets.push(new Asset("art/readme.txt", "do NOT readme.txt"));
+
+		if (System.exists("LICENSE"))
+			assets.push(new Asset("LICENSE", "LICENSE.txt"));
+
+		assets.push(new Asset("assets/fonts", "assets/fonts", null, true));
+
+		haxelibs.push(new Haxelib("flixel"));
+		haxelibs.push(new Haxelib("flixel-addons"));
+		haxelibs.push(new Haxelib("hscript"));
+		haxelibs.push(new Haxelib("actuate"));
+		haxelibs.push(new Haxelib("extension-webm"));
+		haxelibs.push(new Haxelib("flixel-ui"));
+
+		if (!defines.exists("mobile"))
+			haxelibs.push(new Haxelib("newgrounds"));
+
+		if (defines.exists("switch"))
+			haxelibs.push(new Haxelib("faxe"));
+
+		haxelibs.push(new Haxelib("polymod"));
+
+		if (defines.exists("windows"))
+		{
+			haxelibs.push(new Haxelib("discord_rpc"));
+			haxelibs.push(new Haxelib("linc_luajit"));
+		}
+
+		if (defines.exists("android"))
+			haxelibs.push(new Haxelib("extension-androidtools"));
+
+		haxedefs.set("FLX_NO_FOCUS_LOST_SCREEN", "");
+		haxedefs.set("FLX_NO_DEBUG", "");
+		haxedefs.set("NAPE_RELEASE_BUILD", "");
+
+		if (defines.exists("mobile"))
+		{
+			haxedefs.set("FLX_NO_NATIVE_CURSOR", "");
+		}
+
+		icons.push(new Icon("art/icon8.png", 8));
+		icons.push(new Icon("art/icon16.png", 16));
+		icons.push(new Icon("art/icon32.png", 32));
+		icons.push(new Icon("art/icon64.png", 64));
+		icons.push(new Icon("art/icon128.png", 128));
+		icons.push(new Icon("art/icon256.png", 256));
+		icons.push(new Icon("art/icon512.png", 512));
+		icons.push(new Icon("art/iconOG.png"));
+
+		if (defines.exists("android") && !defines.exists("debug"))
+		{
+			certificate = new Certificate("key.keystore", "@ellawy09", "alafandy", "@ellawy09");
+		}
+
+		if (defines.exists("newgrounds"))
+			haxedefs.set("NG_LOGIN", "");
+	}
+}
