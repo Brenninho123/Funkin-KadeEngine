@@ -110,6 +110,9 @@ class Project extends HXProject
 		if (!System.exists("assets/preload/characters"))
 			Log.warn("Missing folder: assets/preload/characters (character JSON configs will fail to load)");
 
+		if (!System.exists("assets/preload/stages"))
+			Log.warn("Missing folder: assets/preload/stages (stage JSON configs will fail to load)");
+
 		var libraries = ["songs", "shared", "tutorial", "week1", "week2", "week3", "week4", "week5", "week6"];
 
 		for (library in libraries)
