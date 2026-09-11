@@ -1,0 +1,13 @@
+{
+	"name": "mallEvil",
+	"camZoom": 0.9,
+	"characterPositions": {
+		"bf": [320, 0],
+		"dad": [0, -80]
+	},
+	"sprites": [
+		{ "name": "bg", "image": "christmas/evilBG", "library": "week5", "x": -400, "y": -500, "scale": 0.8, "antialiasing": true, "scrollFactor": [0.2, 0.2] },
+		{ "name": "evilTree", "image": "christmas/evilTree", "library": "week5", "x": 300, "y": -300, "antialiasing": true, "scrollFactor": [0.2, 0.2] },
+		{ "name": "evilSnow", "image": "christmas/evilSnow", "library": "week5", "x": -200, "y": 700, "antialiasing": true }
+	]
+}
