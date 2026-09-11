@@ -72,7 +72,7 @@ import sys.FileSystem;
 import ModChartState;
 #end
 
-import Paths;
+import funkin.Paths;
 import MusicBeatState;
 import Note;
 import Song;
