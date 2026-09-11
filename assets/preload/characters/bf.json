@@ -1,0 +1,24 @@
+{
+	"image": "characters/BOYFRIEND",
+	"library": "shared",
+	"atlasType": "sparrow",
+	"danceIdle": false,
+	"flipAnimsOnPlayer": false,
+	"healthIcon": "bf",
+	"animations": [
+		{ "name": "idle", "anim": "BF idle dance", "fps": 24, "offsets": [-5, 0] },
+		{ "name": "singUP", "anim": "BF NOTE UP0", "fps": 24, "offsets": [-29, 27] },
+		{ "name": "singLEFT", "anim": "BF NOTE LEFT0", "fps": 24, "offsets": [12, -6] },
+		{ "name": "singRIGHT", "anim": "BF NOTE RIGHT0", "fps": 24, "offsets": [-38, -7] },
+		{ "name": "singDOWN", "anim": "BF NOTE DOWN0", "fps": 24, "offsets": [-10, -50] },
+		{ "name": "singUPmiss", "anim": "BF NOTE UP MISS", "fps": 24, "offsets": [-29, 27] },
+		{ "name": "singLEFTmiss", "anim": "BF NOTE LEFT MISS", "fps": 24, "offsets": [12, 24] },
+		{ "name": "singRIGHTmiss", "anim": "BF NOTE RIGHT MISS", "fps": 24, "offsets": [-30, 21] },
+		{ "name": "singDOWNmiss", "anim": "BF NOTE DOWN MISS", "fps": 24, "offsets": [-11, -19] },
+		{ "name": "hey", "anim": "BF HEY", "fps": 24, "offsets": [7, 4] },
+		{ "name": "firstDeath", "anim": "BF dies", "fps": 24, "offsets": [37, 11] },
+		{ "name": "deathLoop", "anim": "BF Dead Loop", "fps": 24, "loop": true, "offsets": [37, 5] },
+		{ "name": "deathConfirm", "anim": "BF Dead confirm", "fps": 24, "offsets": [37, 69] },
+		{ "name": "scared", "anim": "BF idle shaking", "fps": 24, "offsets": [-4, 0] }
+	]
+}
