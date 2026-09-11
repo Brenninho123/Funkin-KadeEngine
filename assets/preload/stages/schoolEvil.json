@@ -1,0 +1,21 @@
+{
+	"name": "schoolEvil",
+	"camZoom": 0.9,
+	"characterPositions": {
+		"bf": [200, 220],
+		"gf": [180, 300]
+	},
+	"sprites": [
+		{
+			"name": "bg",
+			"image": "weeb/animatedEvilSchool",
+			"library": "week6",
+			"x": 400,
+			"y": 200,
+			"scale": 6,
+			"scrollFactor": [0.8, 0.9],
+			"startAnim": "idle",
+			"animations": [{ "name": "idle", "anim": "background 2", "fps": 24, "loop": true }]
+		}
+	]
+}
