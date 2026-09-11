@@ -1,0 +1,46 @@
+{
+	"name": "mall",
+	"camZoom": 0.8,
+	"characterPositions": {
+		"bf": [200, 0]
+	},
+	"sprites": [
+		{ "name": "bg", "image": "christmas/bgWalls", "library": "week5", "x": -1000, "y": -500, "scale": 0.8, "antialiasing": true, "scrollFactor": [0.2, 0.2] },
+		{
+			"name": "upperBoppers",
+			"image": "christmas/upperBop",
+			"library": "week5",
+			"x": -240,
+			"y": -90,
+			"scale": 0.85,
+			"antialiasing": true,
+			"distraction": true,
+			"scrollFactor": [0.33, 0.33],
+			"animations": [{ "name": "bop", "anim": "Upper Crowd Bob", "fps": 24 }]
+		},
+		{ "name": "bgEscalator", "image": "christmas/bgEscalator", "library": "week5", "x": -1100, "y": -600, "scale": 0.9, "antialiasing": true, "scrollFactor": [0.3, 0.3] },
+		{ "name": "tree", "image": "christmas/christmasTree", "library": "week5", "x": 370, "y": -250, "antialiasing": true, "scrollFactor": [0.4, 0.4] },
+		{
+			"name": "bottomBoppers",
+			"image": "christmas/bottomBop",
+			"library": "week5",
+			"x": -300,
+			"y": 140,
+			"antialiasing": true,
+			"distraction": true,
+			"scrollFactor": [0.9, 0.9],
+			"animations": [{ "name": "bop", "anim": "Bottom Level Boppers", "fps": 24 }]
+		},
+		{ "name": "fgSnow", "image": "christmas/fgSnow", "library": "week5", "x": -600, "y": 700, "antialiasing": true },
+		{
+			"name": "santa",
+			"image": "christmas/santa",
+			"library": "week5",
+			"x": -840,
+			"y": 150,
+			"antialiasing": true,
+			"distraction": true,
+			"animations": [{ "name": "idle", "anim": "santa idle in fear", "fps": 24 }]
+		}
+	]
+}
