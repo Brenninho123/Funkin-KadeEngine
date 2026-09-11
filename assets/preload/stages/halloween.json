@@ -1,0 +1,19 @@
+{
+	"name": "halloween",
+	"camZoom": 0.9,
+	"sprites": [
+		{
+			"name": "halloweenBG",
+			"image": "halloween_bg",
+			"library": "week2",
+			"x": -200,
+			"y": -100,
+			"antialiasing": true,
+			"startAnim": "idle",
+			"animations": [
+				{ "name": "idle", "anim": "halloweem bg0", "fps": 24, "loop": true },
+				{ "name": "lightning", "anim": "halloweem bg lightning strike", "fps": 24 }
+			]
+		}
+	]
+}
