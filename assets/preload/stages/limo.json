@@ -1,0 +1,34 @@
+{
+	"name": "limo",
+	"camZoom": 0.9,
+	"characterPositions": {
+		"bf": [260, -220]
+	},
+	"sprites": [
+		{ "name": "skyBG", "image": "limo/limoSunset", "library": "week4", "x": -120, "y": -50, "scrollFactor": [0.1, 0.1] },
+		{
+			"name": "bgLimo",
+			"image": "limo/bgLimo",
+			"library": "week4",
+			"x": -200,
+			"y": 480,
+			"scrollFactor": [0.4, 0.4],
+			"startAnim": "drive",
+			"animations": [{ "name": "drive", "anim": "background limo pink", "fps": 24, "loop": true }]
+		},
+		{
+			"name": "limo",
+			"image": "limo/limoDrive",
+			"library": "week4",
+			"x": -120,
+			"y": 550,
+			"antialiasing": true,
+			"startAnim": "drive",
+			"animations": [{ "name": "drive", "anim": "Limo stage", "fps": 24, "loop": true }]
+		},
+		{ "name": "fastCar", "image": "limo/fastCarLol", "library": "week4", "x": -300, "y": 160, "distraction": true }
+	],
+	"specials": [
+		{ "type": "limoDancers", "name": "limoDancers", "x": 130, "y": 80, "count": 5, "spacing": 370, "scrollFactor": [0.4, 0.4] }
+	]
+}
