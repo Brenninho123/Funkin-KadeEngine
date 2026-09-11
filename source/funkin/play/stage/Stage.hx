@@ -1,5 +1,6 @@
 package funkin.play.stage;
 
+import funkin.Paths;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.effects.FlxTrail;
