@@ -1,0 +1,40 @@
+{
+	"name": "school",
+	"camZoom": 0.9,
+	"characterPositions": {
+		"bf": [200, 220],
+		"gf": [180, 300]
+	},
+	"sprites": [
+		{ "name": "bgSky", "image": "weeb/weebSky", "library": "week6", "x": 0, "y": 0, "scale": 6, "scrollFactor": [0.1, 0.1] },
+		{ "name": "bgSchool", "image": "weeb/weebSchool", "library": "week6", "x": -200, "y": 0, "scale": 6, "scrollFactor": [0.6, 0.9] },
+		{ "name": "bgStreet", "image": "weeb/weebStreet", "library": "week6", "x": -200, "y": 0, "scale": 6, "scrollFactor": [0.95, 0.95] },
+		{ "name": "fgTrees", "image": "weeb/weebTreesBack", "library": "week6", "x": -30, "y": 130, "scale": 4.8, "scrollFactor": [0.9, 0.9] },
+		{
+			"name": "bgTrees",
+			"image": "weeb/weebTrees",
+			"library": "week6",
+			"atlasType": "packer",
+			"x": -580,
+			"y": -800,
+			"scale": 8.4,
+			"scrollFactor": [0.85, 0.85],
+			"startAnim": "treeLoop",
+			"animations": [{ "name": "treeLoop", "anim": "", "fps": 12, "loop": true, "indices": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18] }]
+		},
+		{
+			"name": "treeLeaves",
+			"image": "weeb/petals",
+			"library": "week6",
+			"x": -200,
+			"y": -40,
+			"scale": 6,
+			"scrollFactor": [0.85, 0.85],
+			"startAnim": "leaves",
+			"animations": [{ "name": "leaves", "anim": "PETALS ALL", "fps": 24, "loop": true }]
+		}
+	],
+	"specials": [
+		{ "type": "backgroundGirls", "name": "bgGirls", "x": -100, "y": 190, "scale": 6 }
+	]
+}
